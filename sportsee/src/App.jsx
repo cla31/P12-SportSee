@@ -1,7 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
+import { userDatas } from './Services/model.js'
+import { userActivity } from './Services/model.js'
+import { userAverageSessions } from './Services/model.js'
+import { userPerformance } from './Services/model.js'
 
-function App() {
+const App = () => {
+  userDatas(12)
+  userActivity()
+  userAverageSessions()
+  userPerformance()
   return (
     <div className="App">
       <header className="App-header">
@@ -19,7 +27,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
