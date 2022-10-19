@@ -1,32 +1,24 @@
-import logo from './logo.svg'
 import './App.css'
-import { userDatas } from './Services/model.js'
-import { userActivity } from './Services/model.js'
-import { userAverageSessions } from './Services/model.js'
-import { userPerformance } from './Services/model.js'
+// import { userDatas } from './Services/model.js'
+// import { userActivity } from './Services/model.js'
+// import { userAverageSessions } from './Services/model.js'
+// import { userPerformance } from './Services/model.js'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Dashboard from './Pages/Dashboard'
 
 const App = () => {
-  userDatas(12)
-  userActivity()
-  userAverageSessions()
-  userPerformance()
+  // userDatas()
+  // userActivity()
+  // userAverageSessions()
+  // userPerformance()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" />
+        <Route path="/user/:id" element={<Dashboard />} />
+        {/* <Route path="*" element={<Error/>} /> */}
+      </Routes>
+    </Router>
   )
 }
 

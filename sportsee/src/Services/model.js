@@ -4,7 +4,7 @@ import AverageSessions from './Utils/AverageSessions'
 import User from './Utils/User'
 import Performance from './Utils/Performance'
 
-const mockDatas = true
+const mockDatas = false
 export const userDatas = async(id) => {
     let url = './MockDatas/userDatas.json'
     if (!mockDatas) {
@@ -20,7 +20,7 @@ export const userDatas = async(id) => {
 export const userActivity = async(id) => {
     let url = './MockDatas/userActivities.json'
     if (!mockDatas) {
-        url = `http://localhost:3000/user/${id}`
+        url = `http://localhost:3000/user/${id}/activity`
         console.log("id", id)
     }
     const allUserActivities = await getDatas(url)
@@ -32,7 +32,7 @@ export const userActivity = async(id) => {
 export const userAverageSessions = async(id) => {
     let url = './MockDatas/userAverageSession.json'
     if (!mockDatas) {
-        url = `http://localhost:3000/user/${id}`
+        url = `http://localhost:3000/user/${id}/average-sessions`
         console.log("id", id)
     }
     const allUserAverageSessions = await getDatas(url)
@@ -45,7 +45,7 @@ export const userAverageSessions = async(id) => {
 export const userPerformance = async(id) => {
     let url = './MockDatas/userPerformances.json'
     if (!mockDatas) {
-        url = `http://localhost:3000/user/${id}`
+        url = `http://localhost:3000/user/${id}/performance`
         console.log("id", id)
     }
     const allUserPerformances = await getDatas(url)

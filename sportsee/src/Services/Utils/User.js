@@ -2,6 +2,7 @@ export default class User {
 
     constructor(data) {
         this.id = data.id
+        console.log("id %%%%%%%%%%%%", this.id)
         this.userFirstName = data.userInfos.firstName
         this.userLastName = data.userInfos.lastName
         this.userAge = data.userInfos.age
