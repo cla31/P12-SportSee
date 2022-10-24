@@ -1,10 +1,11 @@
 export default class Activity {
     constructor(data) {
         this.id = data.userId
-        this.sessions = data.sessions
-        this.days = data.sessions.map((session) => session.day)
-        this.kilos = data.sessions.map((session) => session.kilogram)
-        this.calories = data.sessions.map((session) => session.calories)
+            // D'abord je récupère un tableau de dates, que je transforme en chiffre grâce à l'index, puis les chiffres en string
+        this.sessionsDays = data.sessions.map(((elmt, index) => elmt.day = (index + 1).toString()))
+            // automatiquement, les jours sont remplacés par les chiffres
+        this.allDatasSessions = data.sessions
 
     }
+
 }

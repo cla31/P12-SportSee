@@ -1,22 +1,15 @@
-import './App.css'
-// import { userDatas } from './Services/model.js'
-// import { userActivity } from './Services/model.js'
-// import { userAverageSessions } from './Services/model.js'
-// import { userPerformance } from './Services/model.js'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Dashboard from './Pages/Dashboard'
+import Page404 from './Pages/Page404'
+import Home from './Pages/Home'
 
 const App = () => {
-  // userDatas()
-  // userActivity()
-  // userAverageSessions()
-  // userPerformance()
   return (
     <Router>
       <Routes>
-        <Route path="/" />
+        <Route path="/" element={<Home />} />
         <Route path="/user/:id" element={<Dashboard />} />
-        {/* <Route path="*" element={<Error/>} /> */}
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </Router>
   )
