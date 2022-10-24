@@ -1,4 +1,4 @@
-![Texte alternatif](./sportsee/src/Assets/logo.png 'Logo Sportsee').
+![Texte alternatif](./sportsee/src/Assets/logo.png 'Logo Sportsee')
 
 # Getting Started with Create React App
 
