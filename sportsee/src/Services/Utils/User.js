@@ -2,11 +2,11 @@ export default class User {
 
     constructor(data) {
         this.id = data.id
-        console.log("id %%%%%%%%%%%%", this.id)
+            // console.log("id %%%%%%%%%%%%", this.id)
         this.userFirstName = data.userInfos.firstName
         this.userLastName = data.userInfos.lastName
         this.userAge = data.userInfos.age
-        this.todayScore = data.todayScore * 100
+        this.todayScore = (data.todayScore || data.score) * 100
         this.calorieCount = data.keyData.calorieCount
         this.proteinCount = data.keyData.proteinCount
         this.carbohydrateCount = data.keyData.carbohydrateCount

@@ -25,10 +25,10 @@ export const userActivity = async(id) => {
         url = '/MockDatas/userActivities.json'
     } else {
         url = `http://localhost:3000/user/${id}/activity`
-        console.log("id", id)
+            // console.log("id", id)
     }
     const allUserActivities = await getDatas(url)
-    console.log("££££££££££ Ce qui arrive dans l'objet Activity", allUserActivities)
+        // console.log("££££££££££ Ce qui arrive dans l'objet Activity", allUserActivities)
     const userActivityInfos = new Activity(allUserActivities)
         // console.log("userActivityInfos", userActivityInfos)
     return userActivityInfos
@@ -41,7 +41,7 @@ export const userAverageSessions = async(id) => {
         url = '/MockDatas/userAverageSession.json'
     } else {
         url = `http://localhost:3000/user/${id}/average-sessions`
-        console.log("id", id)
+            // console.log("id", id)
     }
     const allUserAverageSessions = await getDatas(url)
         // console.log("+++++++++++", allUserAverageSessions)

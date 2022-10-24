@@ -22,7 +22,7 @@ const Dashboard = () => {
   userActivity(id)
   userAverageSessions(id)
   userPerformance(id)
-  console.log(id)
+  // console.log(id)
 
   const navigate = useNavigate()
 
