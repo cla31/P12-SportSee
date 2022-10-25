@@ -1,4 +1,14 @@
+/**
+ * @class
+ * @classdesc data formatting in class of user average sessions
+ */
+
 export default class AverageSessions {
+    /**
+     * The function takes in an object, and then assigns the values of the object to the properties of
+     * the class.
+     * @param {Object} datas - user average sessions datas
+     */
     constructor(datas) {
         this.id = datas.userId
             //Je récupère les jours sous forme de chiffres

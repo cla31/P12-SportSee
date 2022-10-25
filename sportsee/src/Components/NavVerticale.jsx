@@ -5,7 +5,10 @@ import iconeNage from '../Assets/nage.png'
 import iconeVelo from '../Assets/velo.png'
 import iconePoids from '../Assets/poids.png'
 import copy from '../Assets/Copiryght.png'
-
+/**
+ * @component
+ * @returns JSX.Element} NavVerticale component
+ */
 function NavVerticale() {
   return (
     <div className="navVertical">

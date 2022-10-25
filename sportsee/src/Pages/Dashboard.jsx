@@ -16,6 +16,11 @@ import Lipides from './../Assets/lipides.png'
 import NavHorizontale from '../Components/NavHorizontale'
 import NavVerticale from '../Components/NavVerticale'
 
+/**
+ * Creation of the page with all the charts
+ * @returns {JSX.Element} Dashboard component
+ */
+
 const Dashboard = () => {
   const { id } = useParams()
   userDatas(id)
@@ -64,22 +69,38 @@ const Dashboard = () => {
               <div className="infosDashboard">
                 <section className="graphiques">
                   <div className="graphActivity">
+                    {/* {console.log(
+                      'Entrée composant Activity',
+                      datas.user_Activity.allDatasSessions
+                    )} */}
                     <Activity
                       userActivity={datas.user_Activity.allDatasSessions}
                     />
                   </div>
                   <div className="graphCarres">
                     <div className="sessions">
+                      {/* {console.log(
+                        'Entrée composant sessions',
+                        datas.user_Sessions.sessionsAllDatas
+                      )} */}
                       <Sessions
                         sessions={datas.user_Sessions.sessionsAllDatas}
                       />
                     </div>
                     <div className="performance">
+                      {/* {console.log(
+                        'Entrée composant performance',
+                        datas.user_Performance.AllPerformances
+                      )} */}
                       <Performance
                         performance={datas.user_Performance.AllPerformances}
                       />
                     </div>
                     <div className="score">
+                      {/* {console.log(
+                        'Entrée composant score',
+                        datas.user_Datas.todayScore
+                      )} */}
                       <Score userMain={datas.user_Datas.todayScore} />
                     </div>
                   </div>

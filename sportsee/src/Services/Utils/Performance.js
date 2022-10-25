@@ -1,4 +1,14 @@
+/**
+ * @class
+ * @classdesc data formatting in class of user performances
+ */
+
 export default class Performance {
+    /**
+     * The function takes in an object, and then assigns the values of the object to the properties of
+     * the class.
+     * @param {Object} datas - user performance datas
+     */
     constructor(datas) {
         this.id = datas.userId
             //transforme l'objet datas.kind en tableau

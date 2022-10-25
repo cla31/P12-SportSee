@@ -7,6 +7,14 @@ import {
   PolarRadiusAxis,
   ResponsiveContainer,
 } from 'recharts'
+import PropTypes from 'prop-types'
+/**
+ * Display user's performances chart
+ * @component
+ * @param {Array} performance - array of performances datas
+ * @returns {JSX.Element} Performance component
+ */
+
 // https://recharts.org/en-US/api/RadarChart
 //https://articles.wesionary.team/radar-chart-with-recharts-6aa3a0b2480e
 const Performance = ({ performance }) => {
@@ -41,3 +49,7 @@ const Performance = ({ performance }) => {
 }
 
 export default Performance
+//Proptypes
+Performance.propTypes = {
+  performance: PropTypes.array.isRequired,
+}

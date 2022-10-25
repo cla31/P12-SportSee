@@ -5,6 +5,14 @@ import {
   ResponsiveContainer,
   PolarAngleAxis,
 } from 'recharts'
+import PropTypes from 'prop-types'
+/**
+ * Display user's score chart
+ * @component
+ * @param {number} score - user score number
+ * @returns {JSX.Element} ScoreGraph component
+ */
+
 // https://recharts.org/en-US/api/RadialBarChart
 const ScoreGraph = ({ userMain }) => {
   const data = [
@@ -102,3 +110,7 @@ const ScoreGraph = ({ userMain }) => {
 }
 
 export default ScoreGraph
+//Proptypes
+ScoreGraph.propTypes = {
+  userMain: PropTypes.number.isRequired,
+}

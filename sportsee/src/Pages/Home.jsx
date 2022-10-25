@@ -4,7 +4,11 @@ import '../Style/Pages/Home.css'
 import Homme from '../Assets/Homme.png'
 import Femme1 from '../Assets/Femme.png'
 import Femme2 from '../Assets/FemmeMocked.png'
-
+/**
+ * Display the home page
+ * @component
+ * @returns {JSX.Element} Home component
+ */
 const Home = () => {
   return (
     <div className="login">

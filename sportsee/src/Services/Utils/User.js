@@ -1,6 +1,15 @@
+/**
+ * @class
+ * @classdesc Class datas user formatting
+ */
 export default class User {
 
     constructor(data) {
+        /**
+         * The function takes in an object, and then assigns the values of the object to the properties of
+         * the class.
+         * @param {Object} datas - user datas
+         */
         this.id = data.id
             // console.log("id %%%%%%%%%%%%", this.id)
         this.userFirstName = data.userInfos.firstName

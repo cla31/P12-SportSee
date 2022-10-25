@@ -1,3 +1,9 @@
+/**
+ * It fetches data from a server and returns it
+ * @param {String} url - The url of datas
+ * @returns {Promise}
+ */
+
 export const getDatas = async(url) => {
     try {
         const response = await fetch(url)

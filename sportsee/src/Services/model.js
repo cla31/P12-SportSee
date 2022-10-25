@@ -4,6 +4,11 @@ import AverageSessions from './Utils/AverageSessions'
 import User from './Utils/User'
 import Performance from './Utils/Performance'
 
+/**
+ * It takes a user id, gets some data from an API or mocked data folder, formats it, and returns it.
+ * @param id - the id of the user
+ * @returns An array of objects with user datas
+ */
 export const userDatas = async(id) => {
     let url = '';
     if (id === '15') {
@@ -18,6 +23,12 @@ export const userDatas = async(id) => {
         // console.log("userInfos", userInfos)
     return userInfos
 }
+
+/**
+ * It takes a user id, gets some data from an API or mocked data folder, formats it, and returns it.
+ * @param id - the id of the user
+ * @returns An array of objects with user activities
+ */
 
 export const userActivity = async(id) => {
     let url = '';
@@ -34,6 +45,11 @@ export const userActivity = async(id) => {
     return userActivityInfos
 }
 
+/**
+ * It takes a user id, gets some data from an API or mocked data folder, formats it, and returns it.
+ * @param id - the id of the user
+ * @returns An array of objects with user averages sessions
+ */
 
 export const userAverageSessions = async(id) => {
     let url = '';
@@ -50,7 +66,11 @@ export const userAverageSessions = async(id) => {
     return userAverageSessionsInfos
 }
 
-
+/**
+ * It takes a user id, gets some data from an API or mocked data folder, formats it, and returns it.
+ * @param id - the id of the user
+ * @returns An array of objects with user performances
+ */
 export const userPerformance = async(id) => {
     let url = '';
     if (id === '15') {

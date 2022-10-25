@@ -2,6 +2,12 @@ import React from 'react'
 import '../Style/Pages/Page404.css'
 import { Link } from 'react-router-dom'
 
+/**
+ * Creation of 404 error page with link back to home page
+ * @component
+ * @returns {JSX.Element} Page404 component
+ */
+
 const Page404 = () => {
   return (
     <div>

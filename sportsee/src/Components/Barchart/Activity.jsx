@@ -8,6 +8,14 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts'
+import PropTypes from 'prop-types'
+
+/**
+ *
+ * @param {boolean}  [Props.active='true']
+ * @param {array}   [Props.payload=[]]
+ * @returns an activ tooltip or null
+ */
 const CustomTooltip = ({ active, payload }) => {
   if (active) {
     return (
@@ -19,7 +27,12 @@ const CustomTooltip = ({ active, payload }) => {
   }
   return null
 }
-
+/**
+ * Display a bar chart with user's daily activity results
+ * @component
+ * @param {Array} activity - array of activity datas
+ * @returns {JSX.Element} ActivityGraph component
+ */
 const ActivityGraph = ({ userActivity }) => {
   return (
     // Pour que les dimensions du graphique soit à 100% dans l'élément parent
@@ -114,3 +127,8 @@ const ActivityGraph = ({ userActivity }) => {
 }
 
 export default ActivityGraph
+
+//Proptypes
+ActivityGraph.propTypes = {
+  userActivity: PropTypes.array.isRequired,
+}

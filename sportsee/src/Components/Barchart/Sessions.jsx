@@ -9,7 +9,13 @@ import {
   Tooltip,
   Rectangle,
 } from 'recharts'
+import PropTypes from 'prop-types'
 
+/**
+ * @param {boolean}  [Props.active='true']
+ * @param {array}   [Props.payload=[]]
+ * @returns an active tooltip or null
+ */
 const CustomTooltip = ({ active, payload }) => {
   if (active) {
     return (
@@ -20,7 +26,9 @@ const CustomTooltip = ({ active, payload }) => {
   }
   return null
 }
-
+/**
+ * @returns a grey rectangle displayed with mouth moving over the chart
+ */
 const CustomCursor = ({ points }) => {
   return (
     <Rectangle
@@ -33,6 +41,12 @@ const CustomCursor = ({ points }) => {
   )
 }
 
+/**
+ * Display user's daily activity chart
+ * @component
+ * @param {Array} sessions - user sessions datas
+ * @returns {JSX.Element} Sessions component
+ */
 const Sessions = ({ sessions }) => {
   //console.log(sessions)
   return (
@@ -109,3 +123,7 @@ const Sessions = ({ sessions }) => {
 }
 
 export default Sessions
+//Proptypes
+Sessions.propTypes = {
+  sessions: PropTypes.array.isRequired,
+}
