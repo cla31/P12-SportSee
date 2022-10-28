@@ -6,15 +6,34 @@ import Performance from './Utils/Performance'
 
 /**
  * It takes a user id, gets some data from an API or mocked data folder, formats it, and returns it.
- * @param id - the id of the user
+ * @param userId - the id of the user
  * @returns An array of objects with user datas
  */
-export const userDatas = async(id) => {
+// let mockDatas = false
+
+
+// export const userDatas = async(userId) => {
+//         let url = `http://localhost:3000/user/${userId}`
+//         if (mockDatas) {
+//             url = '/MockDatas/userDatas.json'
+//         }
+//         const allUserDatas = await getDatas(url)
+//         const userInfos = new User(allUserDatas)
+//             // console.log("userInfos", userInfos)
+//         return userInfos
+//     }
+//********************************************************************** */
+//********************************************************************** */
+//********************************************************************** */
+//********************************************************************** */
+//********************************************************************** */
+
+export const userDatas = async(userId) => {
     let url = '';
-    if (id === '15') {
+    if (userId === '15') {
         url = '/MockDatas/userDatas.json'
     } else {
-        url = `http://localhost:3000/user/${id}`
+        url = `http://localhost:3000/user/${userId}`
             // console.log("id", id)
     }
 
@@ -29,13 +48,30 @@ export const userDatas = async(id) => {
  * @param id - the id of the user
  * @returns An array of objects with user activities
  */
+// export const userActivity = async(userId) => {
+//         let url = `http://localhost:3000/user/${userId}/activity`
+//         if (mockDatas) {
+//             console.log("id", userId)
+//             url = '/MockDatas/userActivities.json'
+//         }
+//         const allUserActivities = await getDatas(url)
+//         console.log("££££££££££ Ce qui arrive dans l'objet Activity", allUserActivities)
+//         const userActivityInfos = new Activity(allUserActivities)
+//             // console.log("userActivityInfos", userActivityInfos)
+//         return userActivityInfos
+//     }
+//********************************************************************** */
+//********************************************************************** */
+//********************************************************************** */
+//********************************************************************** */
+//********************************************************************** */
 
-export const userActivity = async(id) => {
+export const userActivity = async(userId) => {
     let url = '';
-    if (id === '15') {
+    if (userId === '15') {
         url = '/MockDatas/userActivities.json'
     } else {
-        url = `http://localhost:3000/user/${id}/activity`
+        url = `http://localhost:3000/user/${userId}/activity`
             // console.log("id", id)
     }
     const allUserActivities = await getDatas(url)
@@ -47,16 +83,34 @@ export const userActivity = async(id) => {
 
 /**
  * It takes a user id, gets some data from an API or mocked data folder, formats it, and returns it.
- * @param id - the id of the user
+ * @param userId - the id of the user
  * @returns An array of objects with user averages sessions
  */
 
-export const userAverageSessions = async(id) => {
+// export const userAverageSessions = async(userId) => {
+//         let url = `http://localhost:3000/user/${userId}/average-sessions`
+//         if (mockDatas) {
+//             url = '/MockDatas/userAverageSession.json'
+//             console.log("id", userId)
+//         }
+//         const allUserAverageSessions = await getDatas(url)
+//             // console.log("+++++++++++", allUserAverageSessions)
+//         const userAverageSessionsInfos = new AverageSessions(allUserAverageSessions)
+//             // console.log("userAverageSessionsInfos", userAverageSessionsInfos)
+//         return userAverageSessionsInfos
+//     }
+//********************************************************************** */
+//********************************************************************** */
+//********************************************************************** */
+//********************************************************************** */
+//********************************************************************** */
+
+export const userAverageSessions = async(userId) => {
     let url = '';
-    if (id === '15') {
+    if (userId === '15') {
         url = '/MockDatas/userAverageSession.json'
     } else {
-        url = `http://localhost:3000/user/${id}/average-sessions`
+        url = `http://localhost:3000/user/${userId}/average-sessions`
             // console.log("id", id)
     }
     const allUserAverageSessions = await getDatas(url)
@@ -68,16 +122,33 @@ export const userAverageSessions = async(id) => {
 
 /**
  * It takes a user id, gets some data from an API or mocked data folder, formats it, and returns it.
- * @param id - the id of the user
+ * @param userId - the id of the user
  * @returns An array of objects with user performances
  */
-export const userPerformance = async(id) => {
+// export const userPerformance = async(userId) => {
+//         let url = `http://localhost:3000/user/${userId}/performance`
+//         if (mockDatas) {
+//             // console.log("id", userId)
+//             url = '/MockDatas/userPerformances.json'
+//         }
+//         const allUserPerformances = await getDatas(url)
+//             // console.log("*************", allUserPerformances)
+//         const userPerformancesInfos = new Performance(allUserPerformances)
+//             // console.log("allUserPerformances", userPerformancesInfos)
+//         return userPerformancesInfos
+//     }
+//********************************************************************** */
+//********************************************************************** */
+//********************************************************************** */
+//********************************************************************** */
+//********************************************************************** */
+export const userPerformance = async(userId) => {
     let url = '';
-    if (id === '15') {
+    if (userId === '15') {
         url = '/MockDatas/userPerformances.json'
     } else {
-        url = `http://localhost:3000/user/${id}/performance`
-        console.log("id", id)
+        url = `http://localhost:3000/user/${userId}/performance`
+            // console.log("id", userId)
     }
     const allUserPerformances = await getDatas(url)
         // console.log("*************", allUserPerformances)

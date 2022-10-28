@@ -9,7 +9,7 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import PropTypes from 'prop-types'
-
+//https://recharts.org/en-US/api/Legend
 /**
  *
  * @param {boolean}  [Props.active='true']

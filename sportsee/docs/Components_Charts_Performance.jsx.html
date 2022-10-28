@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: Services/Utils/User.js</title>
+    <title>JSDoc: Source: Components/Charts/Performance.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: Services/Utils/User.js</h1>
+    <h1 class="page-title">Source: Components/Charts/Performance.jsx</h1>
 
     
 
@@ -26,32 +26,62 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @class
- * @classdesc Class datas user formatting
+            <pre class="prettyprint source linenums"><code>import React from 'react'
+import {
+  Radar,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  ResponsiveContainer,
+} from 'recharts'
+import PropTypes from 'prop-types'
+/**
+ * Display user's performances chart
+ * @component
+ * @param {Array} performance - array of performances datas
+ * @returns {JSX.Element} Performance component
  */
-export default class User {
 
-    constructor(data) {
-        /**
-         * The function takes in an object, and then assigns the values of the object to the properties of
-         * the class.
-         * @param {Object} datas - user datas
-         */
-        this.id = data.id
-            // console.log("id %%%%%%%%%%%%", this.id)
-        this.userFirstName = data.userInfos.firstName
-        this.userLastName = data.userInfos.lastName
-        this.userAge = data.userInfos.age
-        this.todayScore = (data.todayScore || data.score) * 100
-        this.calorieCount = data.keyData.calorieCount
-        this.proteinCount = data.keyData.proteinCount
-        this.carbohydrateCount = data.keyData.carbohydrateCount
-        this.lipidCount = data.keyData.lipidCount
+// https://recharts.org/en-US/api/RadarChart
+//https://articles.wesionary.team/radar-chart-with-recharts-6aa3a0b2480e
+const Performance = ({ performance }) => {
+  //console.log(performance)
+  return (
+    &lt;div className="squareGraph performGraph">
+      &lt;ResponsiveContainer width="100%" aspect={1}>
+        {/* Stylisation du composants et entrée des datas */}
+        &lt;RadarChart
+          margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
+          style={{ backgroundColor: '#282D30' }}
+          data={performance}
+        >
+          {/* Pour les rayons blancs */}
+          &lt;PolarGrid radialLines={false} />
+          {/* Pour les titres des valeurs */}
+          &lt;PolarAngleAxis
+            dataKey="kind"
+            tickLine={false}
+            axisLine={false}
+            dy={5}
+            stroke="#FFF"
+            tick={{ fill: '#FFFFFF', fontSize: 12 }}
+          />
+          &lt;PolarRadiusAxis tick={false} tickCount={6} axisLine={false} />
+          {/* Pour gérer le contenu rouge */}
+          &lt;Radar dataKey="value" fill="#FF0101" fillOpacity={0.6} />
+        &lt;/RadarChart>
+      &lt;/ResponsiveContainer>
+    &lt;/div>
+  )
+}
 
-    }
-
-}</code></pre>
+export default Performance
+//Proptypes
+Performance.propTypes = {
+  performance: PropTypes.array.isRequired,
+}
+</code></pre>
         </article>
     </section>
 

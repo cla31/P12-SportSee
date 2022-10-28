@@ -36,6 +36,7 @@ const ScoreGraph = ({ userMain }) => {
         //épaisseur de la barre
         barSize={10}
         data={data}
+        //????????
         startAngle={80}
         endAngle={450}
       >

@@ -81,6 +81,7 @@ const Sessions = ({ sessions }) => {
             tick={false}
             domain={['dataMin - 5', 'dataMax + 5']}
           />
+          {/* Appel des fonctions */}
           <Tooltip content={<CustomTooltip />} cursor={<CustomCursor />} />
           <Line
             type="monotone"
