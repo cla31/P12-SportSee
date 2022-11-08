@@ -82,7 +82,17 @@ const Sessions = ({ sessions }) => {
             domain={['dataMin - 5', 'dataMax + 5']}
           />
           {/* Appel des fonctions */}
-          <Tooltip content={<CustomTooltip />} cursor={<CustomCursor />} />
+          <Tooltip
+            content={<CustomTooltip />}
+            cursor={<CustomCursor />}
+            wrapperStyle={{
+              background: '#FFF',
+              textAlign: 'center',
+              width: '59px',
+              height: '25px',
+              outline: 'none',
+            }}
+          />
           <Line
             type="monotone"
             dataKey="sessionLength"

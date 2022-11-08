@@ -9,7 +9,7 @@ import Performance from './Utils/Performance'
  * @param userId - the id of the user
  * @returns An array of objects with user datas
  */
-// let mockDatas = false
+const mockDatas = false
 
 
 // export const userDatas = async(userId) => {
@@ -30,7 +30,7 @@ import Performance from './Utils/Performance'
 
 export const userDatas = async(userId) => {
     let url = '';
-    if (userId === '15') {
+    if (mockDatas) {
         url = '/MockDatas/userDatas.json'
     } else {
         url = `http://localhost:3000/user/${userId}`
@@ -68,7 +68,7 @@ export const userDatas = async(userId) => {
 
 export const userActivity = async(userId) => {
     let url = '';
-    if (userId === '15') {
+    if (mockDatas) {
         url = '/MockDatas/userActivities.json'
     } else {
         url = `http://localhost:3000/user/${userId}/activity`
@@ -107,7 +107,7 @@ export const userActivity = async(userId) => {
 
 export const userAverageSessions = async(userId) => {
     let url = '';
-    if (userId === '15') {
+    if (mockDatas) {
         url = '/MockDatas/userAverageSession.json'
     } else {
         url = `http://localhost:3000/user/${userId}/average-sessions`
@@ -144,7 +144,7 @@ export const userAverageSessions = async(userId) => {
 //********************************************************************** */
 export const userPerformance = async(userId) => {
     let url = '';
-    if (userId === '15') {
+    if (mockDatas) {
         url = '/MockDatas/userPerformances.json'
     } else {
         url = `http://localhost:3000/user/${userId}/performance`

@@ -26,8 +26,6 @@ const ScoreGraph = ({ userMain }) => {
     //  Affiche le container
     <ResponsiveContainer width="100%" aspect={1}>
       <RadialBarChart
-        cx="50%"
-        cy="50%"
         style={{ backgroundColor: 'var(--gris)', borderRadius: '5px' }}
         width="100%"
         height="100%"
@@ -36,8 +34,7 @@ const ScoreGraph = ({ userMain }) => {
         //épaisseur de la barre
         barSize={10}
         data={data}
-        //????????
-        startAngle={80}
+        startAngle={90}
         endAngle={450}
       >
         <circle cx="50%" cy="50%" fill="white" r="70"></circle>

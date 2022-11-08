@@ -56,7 +56,7 @@ const ActivityGraph = ({ userActivity }) => {
           className="activityXAxis"
           dataKey="day"
           tickLine={false}
-          stroke=" #DEDEDE"
+          stroke="#DEDEDE"
           tick={{ fill: '#9B9EAC', fontWeight: 500, fontSize: 14 }}
           padding={{ left: -47, right: -48 }}
           tickMargin={16}
