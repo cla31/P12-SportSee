@@ -2,6 +2,7 @@ import React from 'react'
 import {
   BarChart,
   Bar,
+  CartesianGrid,
   XAxis,
   YAxis,
   Tooltip,
@@ -51,6 +52,7 @@ const ActivityGraph = ({ userActivity }) => {
         barSize={7} //epaisseur de la barre
         barGap={8} //espace entre chaque barre
       >
+        <CartesianGrid strokeDasharray="4 1" vertical={false} />
         {/*Pour afficher les dates*/}
         <XAxis
           className="activityXAxis"
