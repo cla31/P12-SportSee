@@ -19,8 +19,8 @@ import PropTypes from 'prop-types'
 const CustomTooltip = ({ active, payload }) => {
   if (active) {
     return (
-      <div className="customTooltipSession">
-        <p className="tooltipDataSession">{`${payload[0].value} `}min</p>
+      <div>
+        <p>{`${payload[0].value} `}min</p>
       </div>
     )
   }
@@ -48,9 +48,8 @@ const CustomCursor = ({ points }) => {
  * @returns {JSX.Element} Sessions component
  */
 const Sessions = ({ sessions }) => {
-  //console.log(sessions)
   return (
-    <div className="squareGraph sessionGraph">
+    <div>
       <ResponsiveContainer width="100%" aspect={1}>
         <LineChart
           style={{ backgroundColor: '#FF0000' }}
@@ -75,13 +74,7 @@ const Sessions = ({ sessions }) => {
             axisLine={false}
             interval="preserveStartEnd"
           />
-          <YAxis
-            axisLine={false}
-            tickLine={false}
-            tick={false}
-            domain={['dataMin - 5', 'dataMax + 5']}
-          />
-          {/* Appel des fonctions */}
+          <YAxis domain={['dataMin - 5', 'dataMax + 5']} />
           <Tooltip
             content={<CustomTooltip />}
             cursor={<CustomCursor />}
@@ -94,15 +87,20 @@ const Sessions = ({ sessions }) => {
             }}
           />
           <Line
-            type="monotone"
+            type="natural"
             dataKey="sessionLength"
             stroke="#FFFFFF"
             dot={false}
             opacity={0.8}
             strokeWidth={2}
+            activeDot={{
+              fill: 'white',
+              strokeOpacity: 0.3,
+              strokeWidth: 6,
+              r: 4,
+            }}
           />
           <text
-            className="graphTitle"
             x="12%"
             y="15%"
             width={147}
@@ -115,7 +113,6 @@ const Sessions = ({ sessions }) => {
             Durée moyenne des{' '}
           </text>
           <text
-            className="graphTitle"
             x="12%"
             y="25%"
             width={147}

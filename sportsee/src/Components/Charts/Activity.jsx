@@ -10,7 +10,7 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import PropTypes from 'prop-types'
-//https://recharts.org/en-US/api/Legend
+
 /**
  *
  * @param {boolean}  [Props.active='true']
@@ -20,9 +20,9 @@ import PropTypes from 'prop-types'
 const CustomTooltip = ({ active, payload }) => {
   if (active) {
     return (
-      <div className="customTooltip">
-        <p className="tooltipData">{`${payload[0].value} `}g</p>
-        <p className="tooltipData">{`${payload[1].value} `}Kcal</p>
+      <div>
+        <p>{`${payload[0].value} `}g</p>
+        <p>{`${payload[1].value} `}Kcal</p>
       </div>
     )
   }
@@ -36,11 +36,7 @@ const CustomTooltip = ({ active, payload }) => {
  */
 const ActivityGraph = ({ userActivity }) => {
   return (
-    // Pour que les dimensions du graphique soit à 100% dans l'élément parent
     <ResponsiveContainer width="100%" height="100%">
-      {/* Pour plus d'infos sur BarChart cf lien ci-dessous:
-      propriétés, composants parents, enfants etc */}
-      {/* https://recharts.org/en-US/api/BarChart */}
       <BarChart
         data={userActivity}
         margin={{
@@ -49,13 +45,11 @@ const ActivityGraph = ({ userActivity }) => {
           left: 45,
           bottom: 20,
         }}
-        barSize={7} //epaisseur de la barre
-        barGap={8} //espace entre chaque barre
+        barSize={7}
+        barGap={8}
       >
         <CartesianGrid strokeDasharray="4 1" vertical={false} />
-        {/*Pour afficher les dates*/}
         <XAxis
-          className="activityXAxis"
           dataKey="day"
           tickLine={false}
           stroke="#DEDEDE"
@@ -63,7 +57,7 @@ const ActivityGraph = ({ userActivity }) => {
           padding={{ left: -47, right: -48 }}
           tickMargin={16}
         />
-        {/*Pour afficher les valeurs y*/}
+
         <YAxis
           tickLine={false}
           orientation="right"
@@ -72,7 +66,7 @@ const ActivityGraph = ({ userActivity }) => {
           tickMargin={45}
           minTickGap={27}
         />
-        {/*Customisation de l'info bulle*/}
+
         <Tooltip
           content={<CustomTooltip />}
           wrapperStyle={{
@@ -86,9 +80,8 @@ const ActivityGraph = ({ userActivity }) => {
             lineHeight: '2.5',
           }}
         />
-        {/* Affichage de la légende poids et calories brûlées du graphique */}
+
         <Legend
-          className="activityLegend"
           verticalAlign="top"
           align="right"
           iconType={'circle'}
@@ -104,8 +97,7 @@ const ActivityGraph = ({ userActivity }) => {
             )
           }}
         />
-        {/*customize et permet d'afficher les barres qui affichent les valeurs*/}
-        {/* la datakey correspond à la "payload[0].value" de customTooltip */}
+
         <Bar
           dataKey="kilogram"
           name="Poids (kg)"
@@ -119,8 +111,8 @@ const ActivityGraph = ({ userActivity }) => {
           fill="#E60000"
           radius={[3, 3, 0, 0]}
         />
-        {/*Pour afficher le titre du graphique :position par rapport aux axes des x et y etc.*/}
-        <text className="graphTitle" x="4%" y="15%" style={{ fontWeight: 500 }}>
+
+        <text x="4%" y="15%" style={{ fontWeight: 500 }}>
           Activité quotidienne
         </text>
       </BarChart>

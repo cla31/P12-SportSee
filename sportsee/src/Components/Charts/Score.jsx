@@ -13,7 +13,6 @@ import PropTypes from 'prop-types'
  * @returns {JSX.Element} ScoreGraph component
  */
 
-// https://recharts.org/en-US/api/RadialBarChart
 const ScoreGraph = ({ userMain }) => {
   const data = [
     {
@@ -23,15 +22,12 @@ const ScoreGraph = ({ userMain }) => {
   ]
 
   return (
-    //  Affiche le container
     <ResponsiveContainer width="100%" aspect={1}>
       <RadialBarChart
         style={{ backgroundColor: 'var(--gris)', borderRadius: '5px' }}
         width="100%"
         height="100%"
-        //Rayon du cercle
         innerRadius={70}
-        //épaisseur de la barre
         barSize={10}
         data={data}
         startAngle={90}
@@ -45,7 +41,7 @@ const ScoreGraph = ({ userMain }) => {
           angleAxisId={1}
           tick={false}
         />
-        {/*Affiche le marqueur rouge*/}
+
         <RadialBar
           background
           dataKey="uv"
@@ -56,15 +52,12 @@ const ScoreGraph = ({ userMain }) => {
         />
 
         <text
-          // Affiche le pourcentage
           className="scoreSize"
           fontWeight="700"
           fontSize={26}
           fill="#282D30"
-          //position de la zone de texte
           x="50%"
           y="45%"
-          //Position du chiffre ds la zone de texte
           textAnchor="middle"
         >{`${userMain}%`}</text>
 
@@ -94,8 +87,6 @@ const ScoreGraph = ({ userMain }) => {
           className="graphTitle"
           x="8%"
           y="8%"
-          // width={147}
-          // height={48}
           dominantBaseline="middle"
           fill="#20253A"
           style={{ fontWeight: 500 }}
