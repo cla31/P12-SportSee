@@ -13,7 +13,7 @@ import Performance from './Utils/Performance'
 //Lorsque les données mockées sont sur false et que le serveur est éteint
 //l'utilisateur est renvoyé vers une page erreurs.
 //Lorsque mockDatas = true, la navigation renvoie les données mockées
-const mockDatas = true
+const mockDatas = false
 
 
 // export const userDatas = async(userId) => {
