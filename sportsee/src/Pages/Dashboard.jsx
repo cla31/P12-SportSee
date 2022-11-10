@@ -44,7 +44,7 @@ const Dashboard = () => {
         setIsLoading(false)
       } catch (error) {
         console.log('=====error=====', error)
-        navigate('/Page404')
+        navigate('/PageErreur')
       }
     })()
   }, [navigate, id])

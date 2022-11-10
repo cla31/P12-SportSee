@@ -13,5 +13,6 @@ export const getDatas = async(url) => {
 
     } catch (erreur) {
         console.log(erreur)
+        return erreur;
     }
 }

@@ -9,7 +9,11 @@ import Performance from './Utils/Performance'
  * @param userId - the id of the user
  * @returns An array of objects with user datas
  */
-const mockDatas = false
+
+//Lorsque les données mockées sont sur false et que le serveur est éteint
+//l'utilisateur est renvoyé vers une page erreurs.
+//Lorsque mockDatas = true, la navigation renvoie les données mockées
+const mockDatas = true
 
 
 // export const userDatas = async(userId) => {
@@ -36,12 +40,21 @@ export const userDatas = async(userId) => {
         url = `http://localhost:3000/user/${userId}`
             // console.log("id", id)
     }
+    try {
+        const allUserDatas = await getDatas(url)
+        const userInfos = new User(allUserDatas)
+            // console.log("userInfos", userInfos)
+        return userInfos
 
-    const allUserDatas = await getDatas(url)
-    const userInfos = new User(allUserDatas)
-        // console.log("userInfos", userInfos)
-    return userInfos
+    } catch (erreur) {
+        console.log(erreur)
+        return erreur;
+
+    }
 }
+
+
+
 
 /**
  * It takes a user id, gets some data from an API or mocked data folder, formats it, and returns it.

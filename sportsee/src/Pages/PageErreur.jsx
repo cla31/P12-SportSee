@@ -1,6 +1,7 @@
 import React from 'react'
-import '../Style/Pages/Page404.css'
+import '../Style/Pages/PageErreur.css'
 import { Link } from 'react-router-dom'
+import notFound from '../Assets/notFound.svg'
 
 /**
  * Creation of 404 error page with link back to home page
@@ -8,12 +9,15 @@ import { Link } from 'react-router-dom'
  * @returns {JSX.Element} Page404 component
  */
 
-const Page404 = () => {
+const PageErreur = () => {
   return (
     <div>
       <div className="message-erreur">
-        <h5>404</h5>
-        <span>Oups! La page que vous demandez n'existe pas.</span>
+        <img src={notFound} alt="" />
+        <span>
+          Oups! La page que vous demandez n'existe pas ou le serveur est
+          indisponible.
+        </span>
         <Link to="/" className="message">
           Retourner sur la page d'accueil
         </Link>
@@ -22,4 +26,4 @@ const Page404 = () => {
   )
 }
 
-export default Page404
+export default PageErreur
