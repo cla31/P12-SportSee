@@ -7,7 +7,7 @@
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 ###
-
+## Project 12 "SportSee" from React JS Application Developer Training:<br/>
 ###
 
 ![Texte alternatif](./sportsee/src/Assets/logo.png 'Logo Sportsee')
