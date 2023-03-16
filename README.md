@@ -40,7 +40,7 @@ SportSee project is an application for sportive people that want to follow their
 - Backend : open a new terminal and run <code>cd BackEnd</code> command, then run<code> yarn dev</code> command, the backend will open http://localhost:3000
 - FrontEnd: open a new terminal, and run <code>cd sportsee</code> command, then run the <code>yarn start</code> command will allow you to run the application on http://localhost:3001
 ##
-To view the page online (with mocked datas) click :point_right: [here](https://sportsee-deployment.vercel.app)
+To view the page online (with mocked datas version) click :point_right: [here](https://sportsee-deployment.vercel.app)
 ##
 **Code Architecture:**<br/>
 <br/>
