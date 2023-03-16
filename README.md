@@ -15,7 +15,15 @@ Use an API for a bank user account with React
 # Présentation
 
 SportSee project is an application for sportive people that want to follow their daily progress through analytics dashboard.
-
+##
+**Skills developed:**
+- Ensuring the data quality of an application
+- Develop advanced graphical elements using JavaScript libraries
+- Interact with a web service
+- Produce technical documentation for an application
+  <br/>
+  <br/>
+##
 # Prerequisites
 
 - NodeJS (v16.17.0)
