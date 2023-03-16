@@ -10,9 +10,8 @@
 ## Project 12 "SportSee" from React JS Application Developer Training:<br/>
 Use an API for a bank user account with React
 ###
-
 ![Texte alternatif](./sportsee/src/Assets/logo.png 'Logo Sportsee')
-
+###
 # Présentation
 
 SportSee project is an application for sportive people that want to follow their daily progress through analytics dashboard.
