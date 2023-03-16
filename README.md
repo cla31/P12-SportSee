@@ -35,13 +35,6 @@ SportSee project is an application for sportive people that want to follow their
 <br/>
 <br/>
 ![Texte alternatif](./sportsee/src/Assets/logo.png 'Logo Sportsee')<br/>
-##
-**Skills developed:**
-- Ensuring the data quality of an application
-- Develop advanced graphical elements using JavaScript libraries
-- Interact with a web service
-- Produce technical documentation for an application
- ##
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
