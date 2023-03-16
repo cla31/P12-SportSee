@@ -34,6 +34,15 @@ SportSee project is an application for sportive people that want to follow their
 ##
 To view the page online (with mocked datas) click :point_right: [here](https://sportsee-deployment.vercel.app)
 ##
+**Code Architecture:**<br/>
+<br/>
+![ARCHITECTURE-CODE](./archi.png)
+##
+**Application overview**:
+<br/>
+<br/>
+![DESKTOP-VERSION](./dashboard.png)
+##
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
