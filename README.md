@@ -8,6 +8,7 @@
 
 ###
 ## Project 12 "SportSee" from React JS Application Developer Training:<br/>
+Use an API for a bank user account with React
 ###
 
 ![Texte alternatif](./sportsee/src/Assets/logo.png 'Logo Sportsee')
