@@ -31,7 +31,9 @@ SportSee project is an application for sportive people that want to follow their
 - Run the yarn command will allow you to install the dependencies npm install or yarn install
 - Backend : open a new terminal and run <code>cd BackEnd</code> command, then run<code> yarn dev</code> command, the backend will open http://localhost:3000
 - FrontEnd: open a new terminal, and run <code>cd sportsee</code> command, then run the <code>yarn start</code> command will allow you to run the application on http://localhost:3001
-
+##
+To view the page online (with mocked datas) click :point_right: [here](https://sportsee-deployment.vercel.app)
+##
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
